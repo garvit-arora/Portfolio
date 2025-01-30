@@ -124,3 +124,16 @@ body {
         transform: translateX(0%);
     }
 }
+@media (max-width: 768px) {
+    .github1 {
+        animation: slideIn 1.5s forwards ease-out;
+        transform: translateX(0);
+        width: 100%;
+    }
+
+    .github {
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+    }
+}
