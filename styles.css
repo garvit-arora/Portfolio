@@ -76,3 +76,30 @@ body {
     100%{opacity: 1;}
     
 }
+.project11 {
+    text-decoration: none;
+    display: block;
+    width: fit-content;
+}
+.project1 {
+    background-color: grey;
+    padding: 15px 20px;
+    border-radius: 8px;
+    color: white;
+    text-align: center;
+    transition: transform 0.3s, background 0.3s;
+}
+.project11:hover{
+    transform: scale(1.2);
+    background-color: grey;
+    border-radius: 50px;
+}
+.projects {
+    flex-direction: row;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+.projectheading{
+    font-size: 80px;
+}
