@@ -3,13 +3,24 @@ body {
     color: white;
     font-family: 'Trebuchet MS', sans-serif;
     text-align: center;
+    animation: fadein 2s ease-out;
+}
+
+@keyframes fadein {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
 }
 
 .name1 {
     margin-top: 20vh;
-    font-size: 2.5rem;
-    animation: fadein 7s forwards;
-    font-size: 100px;
+    font-size: 80px;
+    font-weight: 600;
+    animation: slidein 1.5s ease-out;
+}
+
+@keyframes slidein {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(0); }
 }
 
 .skills-section {
@@ -29,58 +40,46 @@ body {
     color: black;
     padding: 10px 15px;
     border-radius: 5px;
-    transition: transform 0.3s;
+    transition: transform 0.3s, background 0.3s;
 }
 
 .skill-list li:hover {
     transform: scale(1.1);
 }
-.github{
+
+.github {
     display: flex;
     gap: 50px;
-    position: relative;
-    margin-left: 300px;
-
+    margin-top: 50px;
+    justify-content: center;
 }
-.githubheading{
+
+.githubheading {
     font-size: 100px;
     position: relative;
-    margin-top: 150px;
-    overflow-x: hidden;
-    animation: githubcome 5s infinite ;
+    animation: githubcome 5s infinite;
 }
+
 @keyframes githubcome {
-    0%{color: red;}
-    10%{color: yellow;}
-    20%{color: white;}
-    30%{color: greenyellow;}
-    40%{color: aqua;}
-    50%{color: violet;}
-    60%{color: aliceblue;}
-    70%{color: orange;}
-    80%{color: yellow;}
-    90%{color: greenyellow;}
-    100%{color: aqua;}
-    
+    0% { color: red; }
+    10% { color: yellow; }
+    20% { color: white; }
+    30% { color: greenyellow; }
+    40% { color: aqua; }
+    50% { color: violet; }
+    60% { color: aliceblue; }
+    70% { color: orange; }
+    80% { color: yellow; }
+    90% { color: greenyellow; }
+    100% { color: aqua; }
 }
-@keyframes fadein {
-    0%{opacity: 0.1;}
-    20%{opacity: 0.2;}
-    30%{opacity: 0.3;}
-    40%{opacity: 0.4;}
-    50%{opacity: 0.5;}
-    60%{opacity: 0.6;}
-    70%{opacity: 0.7;}
-    80%{opacity: 0.8;}
-    90%{opacity: 0.9;}
-    100%{opacity: 1;}
-    
-}
+
 .project11 {
     text-decoration: none;
     display: block;
     width: fit-content;
 }
+
 .project1 {
     background-color: grey;
     padding: 15px 20px;
@@ -89,17 +88,39 @@ body {
     text-align: center;
     transition: transform 0.3s, background 0.3s;
 }
-.project11:hover{
-    transform: scale(1.2);
-    background-color: grey;
-    border-radius: 50px;
+
+.project11:hover {
+    transform: scale(1.1);
 }
+
 .projects {
     flex-direction: row;
     display: flex;
     gap: 20px;
     align-items: center;
+    justify-content: center;
+    margin-top: 50px;
 }
-.projectheading{
+
+.projectheading {
     font-size: 80px;
+}
+.img1{
+    opacity: 0;
+    transform: translateX(-100%);
+    animation: slideIn 1.5s forwards ease-out;
+    width: 200px;
+    border-radius: 200px;
+    border: 2px solid black;
+}
+
+@keyframes slideIn {
+    0% {
+        opacity: 0;
+        transform: translateX(200%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0%);
+    }
 }
