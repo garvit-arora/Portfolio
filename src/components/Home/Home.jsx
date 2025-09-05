@@ -11,7 +11,7 @@ import logo1 from "../../assets/logo4.png";
 import TextPressure from "../TextPressure";
 import TrueFocus from "../TrueFocus";
 import LogoLoop from "../LogoLoop";
-import FuzzyText from '../FuzzyText';
+import FuzzyText from "../FuzzyText";
 import {
   SiReact,
   SiTypescript,
@@ -27,26 +27,47 @@ import {
   SiNpm,
   SiFigma,
   SiLinux,
+  SiLinkedin,
+  SiLeetcode,
+  SiCodeforces,
 } from "react-icons/si";
 import { Timeline } from "@/components/ui/timeline";
 import { AnimatedTimeline } from "../AnimatedTimeline";
 import Contact from "../Contact/Contact";
 
-
-
 const techLogos = [
   { node: <SiReact />, title: "React", href: "https://react.dev" },
-  { node: <SiHtml5 />, title: "HTML", href: "" },
-  { node: <SiCss3 />, title: "CSS", href: "" },
-  { node: <SiJavascript />, title: "JS", href: "" },
-  { node: <SiCplusplus />, title: "CPP", href: "" },
-  { node: <SiPython />, title: "Python", href: "" },
-  { node: <SiDocker />, title: "Docker", href: "" },
-  { node: <SiGithub />, title: "Github", href: "" },
-  { node: <SiNodedotjs />, title: "Node.js", href: "" },
-  { node: <SiNpm />, title: "NPM", href: "" },
-  { node: <SiFigma />, title: "Figma", href: "" },
-  { node: <SiLinux />, title: "Linux", href: "" },
+  {
+    node: <SiHtml5 />,
+    title: "HTML",
+    href: "https://en.wikipedia.org/wiki/HTML",
+  },
+  { node: <SiCss3 />, title: "CSS", href: "https://en.wikipedia.org/wiki/CSS" },
+  {
+    node: <SiJavascript />,
+    title: "JS",
+    href: "https://en.wikipedia.org/wiki/JS",
+  },
+  {
+    node: <SiCplusplus />,
+    title: "CPP",
+    href: "https://en.wikipedia.org/wiki/C%2B%2B",
+  },
+  {
+    node: <SiPython />,
+    title: "Python",
+    href: "https://en.wikipedia.org/wiki/Python",
+  },
+  {
+    node: <SiDocker />,
+    title: "Docker",
+    href: "https://en.wikipedia.org/wiki/",
+  },
+  { node: <SiGithub />, title: "Github", href: "https://www.docker.com/" },
+  { node: <SiNodedotjs />, title: "Node.js", href: "https://nodejs.org/" },
+  { node: <SiNpm />, title: "NPM", href: "https://www.npmjs.com/" },
+  { node: <SiFigma />, title: "Figma", href: "https://www.figma.com/" },
+  { node: <SiLinux />, title: "Linux", href: "https://www.linux.org/" },
   {
     node: <SiTypescript />,
     title: "TypeScript",
@@ -109,7 +130,7 @@ function Home() {
           />
         </div>
 
-        <div className="absolute inset-0 flex flex-col items-center justify-start mt-16">
+        <div className="absolute inset-0 flex flex-col items-center justify-start mt-13">
           <img
             src={me}
             alt="My Pic"
@@ -159,22 +180,23 @@ function Home() {
             About Me
           </ScrollFloat>
         </div>
-    <div className="m-3">
-        <ScrollReveal
-          baseOpacity={0}
-          enableBlur={true}
-          baseRotation={5}
-          blurStrength={10}
-        >
-          I’m Garvit Arora, a Frontend Developer with a vision that goes beyond
-          just writing code. For me, development is not just about pushing
-          pixels on a screen, it’s about creating meaningful digital experiences
-          that actually solve problems, tell stories, and leave an impression on
-          people who use them. Over the past year, I’ve explored and
-          experimented with countless projects — some small and experimental,
-          some large and impactful — each one teaching me how design and
-          functionality can merge to create something unforgettable.
-        </ScrollReveal>
+        <div className="m-3">
+          <ScrollReveal
+            baseOpacity={0}
+            enableBlur={true}
+            baseRotation={5}
+            blurStrength={10}
+          >
+            I’m Garvit Arora, a Frontend Developer with a vision that goes
+            beyond just writing code. For me, development is not just about
+            pushing pixels on a screen, it’s about creating meaningful digital
+            experiences that actually solve problems, tell stories, and leave an
+            impression on people who use them. Over the past year, I’ve explored
+            and experimented with countless projects — some small and
+            experimental, some large and impactful — each one teaching me how
+            design and functionality can merge to create something
+            unforgettable.
+          </ScrollReveal>
         </div>
       </div>
       <div></div>
@@ -241,13 +263,29 @@ function Home() {
       </div>
       <div>
         <div className="text-center m-10">
-            <FuzzyText >Work Experience</FuzzyText>
-          
+          <FuzzyText>Work Experience</FuzzyText>
         </div>
         <AnimatedTimeline />
       </div>
       <div>
         <Contact />
+      </div>
+      <div className="flex space-x-4 mt-4 justify-center m-10">
+        <a href="https://linkedin.com/in/garvit-" target="_blank">
+          <SiLinkedin className="text-white w-6 h-6" />
+        </a>
+        <a href="https://github.com/garvit-arora" target="_blank">
+          <SiGithub className="text-white w-6 h-6" />
+        </a>
+        <a href="https://leetcode.com/garvit-" target="_blank">
+          <SiLeetcode className="text-white w-6 h-6" />
+        </a>
+        <a
+          href="https://codeforces.com/profile/garvit.university"
+          target="_blank"
+        >
+          <SiCodeforces className="text-white w-6 h-6" />
+        </a>
       </div>
     </>
   );

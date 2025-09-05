@@ -1,5 +1,6 @@
 import PillNav from "../PillNav.jsx";
-import logo from "../../assets/react.svg";
+import { Link } from "react-router-dom";
+
 export default function Header() {
   return (
     <div className="flex justify-center">
@@ -7,7 +8,10 @@ export default function Header() {
         items={[
           { label: "Home", href: "/" },
           { label: "Projects", href: "#projects" },
-          { label: "Resume", href: "/services" },
+          { 
+            label: "Resume",
+            href: "https://www.dropbox.com/scl/fi/2k07gu85gsnf38aswet15/Resume.pdf?rlkey=fg1ln1wssdzu3nt4v6lc1j296&st=zf2ufnhw&dl=0", 
+          },
           { label: "Contact", href: "#contact" },
         ]}
         activeHref="/"
