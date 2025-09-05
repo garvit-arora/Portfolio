@@ -65,7 +65,7 @@ const TrueFocus = ({
           <span
             key={index}
             ref={el => (wordRefs.current[index] = el)}
-            className="relative text-[11rem] font-black cursor-pointer"
+            className="relative text-8xl font-black cursor-pointer"
             style={{
               filter: manualMode
                 ? isActive

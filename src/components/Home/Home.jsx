@@ -30,6 +30,7 @@ import {
 } from "react-icons/si";
 import { Timeline } from "@/components/ui/timeline";
 import { AnimatedTimeline } from "../AnimatedTimeline";
+import Contact from "../Contact/Contact";
 
 const techLogos = [
   { node: <SiReact />, title: "React", href: "https://react.dev" },
@@ -241,6 +242,9 @@ function Home() {
           
         </div>
         <AnimatedTimeline />
+      </div>
+      <div>
+        <Contact />
       </div>
     </>
   );

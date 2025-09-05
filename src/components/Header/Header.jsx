@@ -8,7 +8,7 @@ export default function Header() {
           { label: "Home", href: "/" },
           { label: "Projects", href: "#projects" },
           { label: "Resume", href: "/services" },
-          { label: "Contact", href: "/contact" },
+          { label: "Contact", href: "#contact" },
         ]}
         activeHref="/"
         className="custom-nav"
