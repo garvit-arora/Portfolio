@@ -32,6 +32,8 @@ import { Timeline } from "@/components/ui/timeline";
 import { AnimatedTimeline } from "../AnimatedTimeline";
 import Contact from "../Contact/Contact";
 
+
+
 const techLogos = [
   { node: <SiReact />, title: "React", href: "https://react.dev" },
   { node: <SiHtml5 />, title: "HTML", href: "" },
@@ -107,16 +109,16 @@ function Home() {
           />
         </div>
 
-        <div className="absolute inset-0 flex flex-col items-center justify-start mt-20">
+        <div className="absolute inset-0 flex flex-col items-center justify-start mt-16">
           <img
             src={me}
             alt="My Pic"
-            className="w-70 h-70 z-11 mt-10 rounded-full object-cover border-4 border-white shadow-lg mb-8"
+            className="w-70 h-70 z-11 mt-10 rounded-full object-cover border-4 border-white shadow-lg "
           />
 
           <SplitText
             text="Garvit Arora"
-            className="text-[14rem]  italic asimovian-regular font-semibold text-center text-white"
+            className="xl:text-[14rem] lg:text-[11rem] italic asimovian-regular font-semibold text-center text-white"
             delay={100}
             duration={0.6}
             ease="power3.out"
@@ -146,7 +148,7 @@ function Home() {
         </div>
       </div>
       <div className="text-white">
-        <div className=" text-center font-bold text-9xl">
+        <div className=" text-center font-bold text-9xl m-5 ">
           <ScrollFloat
             animationDuration={1}
             ease="back.inOut(2)"
@@ -157,7 +159,7 @@ function Home() {
             About Me
           </ScrollFloat>
         </div>
-
+    <div className="m-3">
         <ScrollReveal
           baseOpacity={0}
           enableBlur={true}
@@ -173,6 +175,7 @@ function Home() {
           some large and impactful — each one teaching me how design and
           functionality can merge to create something unforgettable.
         </ScrollReveal>
+        </div>
       </div>
       <div></div>
       <div className="">
@@ -207,7 +210,7 @@ function Home() {
           <br />
         </div>
       </div>
-      <div className="text-white m-40">
+      <div className="text-white mt-40 mb-20">
         <TrueFocus
           sentence="Skills Acquired"
           manualMode={false}
@@ -218,7 +221,7 @@ function Home() {
         />
         <div
           style={{ position: "relative", overflow: "hidden" }}
-          className="mt-40"
+          className="mt-40 w-screen"
         >
           <LogoLoop
             logos={techLogos}
