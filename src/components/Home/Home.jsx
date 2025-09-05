@@ -100,7 +100,7 @@ const items = [
   },
 ];
 const handleAnimationComplete = () => {
-  console.log("All letters have animated!");
+//   console.log("All letters have animated!");
 };
 
 function Home() {
