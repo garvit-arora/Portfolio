@@ -6,16 +6,58 @@ import me from "../../assets/garvit.jpg";
 import PixelBlast from "../PixelBlast";
 import { useRef } from "react";
 import ChromaGrid from "../ChromaGrid";
-import chatbot from "../../assets/logo2.png"
-import logo1 from "../../assets/logo4.png"
-import TextPressure from '../TextPressure';
-import TrueFocus from '../TrueFocus';
+import chatbot from "../../assets/logo2.png";
+import logo1 from "../../assets/logo4.png";
+import TextPressure from "../TextPressure";
+import TrueFocus from "../TrueFocus";
+import LogoLoop from "../LogoLoop";
+import FuzzyText from '../FuzzyText';
+import {
+  SiReact,
+  SiTypescript,
+  SiTailwindcss,
+  SiHtml5,
+  SiCss3,
+  SiJavascript,
+  SiCplusplus,
+  SiPython,
+  SiDocker,
+  SiGithub,
+  SiNodedotjs,
+  SiNpm,
+  SiFigma,
+  SiLinux,
+} from "react-icons/si";
+import { Timeline } from "@/components/ui/timeline";
+import { AnimatedTimeline } from "../AnimatedTimeline";
 
-
-
+const techLogos = [
+  { node: <SiReact />, title: "React", href: "https://react.dev" },
+  { node: <SiHtml5 />, title: "HTML", href: "" },
+  { node: <SiCss3 />, title: "CSS", href: "" },
+  { node: <SiJavascript />, title: "JS", href: "" },
+  { node: <SiCplusplus />, title: "CPP", href: "" },
+  { node: <SiPython />, title: "Python", href: "" },
+  { node: <SiDocker />, title: "Docker", href: "" },
+  { node: <SiGithub />, title: "Github", href: "" },
+  { node: <SiNodedotjs />, title: "Node.js", href: "" },
+  { node: <SiNpm />, title: "NPM", href: "" },
+  { node: <SiFigma />, title: "Figma", href: "" },
+  { node: <SiLinux />, title: "Linux", href: "" },
+  {
+    node: <SiTypescript />,
+    title: "TypeScript",
+    href: "https://www.typescriptlang.org",
+  },
+  {
+    node: <SiTailwindcss />,
+    title: "Tailwind CSS",
+    href: "https://tailwindcss.com",
+  },
+];
 const items = [
   {
-    image:chatbot,
+    image: chatbot,
     title: "AI CHATBOT",
     subtitle: "React.js, Gemini API, JS",
     handle: "ChatBazzz",
@@ -73,7 +115,7 @@ function Home() {
 
           <SplitText
             text="Garvit Arora"
-            className="text-[14rem] italic asimovian-regular font-semibold text-center text-white"
+            className="text-[14rem]  italic asimovian-regular font-semibold text-center text-white"
             delay={100}
             duration={0.6}
             ease="power3.out"
@@ -134,54 +176,71 @@ function Home() {
       <div></div>
       <div className="">
         <div className="h-auto w-100% inset-0 text-white">
-          <div >
-            
-  
-
-
-
-
-<div className="projects h-100" id="projects" >
-  <TextPressure
-  
-    text="Projects"
-    flex={true}
-    alpha={false}
-    stroke={false}
-    width={true}
-    weight={true}
-    italic={true}
-    textColor="#ffffff"
-    strokeColor="#ff0000"
-    minFontSize={30}
-  />
-</div> <br /> <br />    
-<div className="mt-10">
-            <ChromaGrid
-              items={items}
-              radius={300}
-              damping={0.45}
-              fadeOut={0.6}
-              ease="power3.out"
-            />
+          <div>
+            <div className="projects h-100" id="projects">
+              <TextPressure
+                text="Projects"
+                flex={true}
+                alpha={false}
+                stroke={false}
+                width={true}
+                weight={true}
+                italic={true}
+                textColor="#ffffff"
+                strokeColor="#ff0000"
+                minFontSize={30}
+              />
+            </div>{" "}
+            <br /> <br />
+            <div className="mt-10">
+              <ChromaGrid
+                items={items}
+                radius={300}
+                damping={0.45}
+                fadeOut={0.6}
+                ease="power3.out"
+              />
             </div>
           </div>
-          <br /><br />
+          <br />
+          <br />
         </div>
       </div>
-      <div className="">
-       
-  
-
-<TrueFocus 
-sentence="Skills Acquired"
-manualMode={false}  
-blurAmount={5}
-borderColor="red"
-animationDuration={2}
-pauseBetweenAnimations={1}
-/>
-
+      <div className="text-white m-40">
+        <TrueFocus
+          sentence="Skills Acquired"
+          manualMode={false}
+          blurAmount={5}
+          borderColor="red"
+          animationDuration={2}
+          pauseBetweenAnimations={1}
+        />
+        <div
+          style={{ position: "relative", overflow: "hidden" }}
+          className="mt-40"
+        >
+          <LogoLoop
+            logos={techLogos}
+            speed={120}
+            direction="left"
+            logoHeight={48}
+            gap={40}
+            pauseOnHover
+            scaleOnHover
+            fadeOut
+            fadeOutColor="#ffffff"
+            ariaLabel="Skills"
+          />
+        </div>{" "}
+        <br />
+        <br />
+      </div>
+      <div>
+        <div className="text-center m-10">
+            <FuzzyText >Work Experience</FuzzyText>
+          
+        </div>
+        <AnimatedTimeline />
       </div>
     </>
   );
